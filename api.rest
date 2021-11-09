@@ -1,0 +1,12 @@
+###
+POST http://localhost:4000/api/tension
+Content-Type: application/json
+
+{
+    "systolic": "120",
+    "diastolic": "80",
+    
+}
+###
+
+GET http://localhost:4000/api/tension
