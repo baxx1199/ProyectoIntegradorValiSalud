@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;500;700;800&display=swap');
+:root{
+    --mainColor:rgb(51, 161, 253);
+    --mainColorCOne:rgb(33, 118, 255);
+    --mainColorCTwo:rgb(12, 186, 186);
+    --secondColor:rgb(255, 0, 53);
+    --secondColorCOne:rgb(216, 17, 89);
+    --secondColorCTwo:rgb(246, 16, 103);
+    --secondColorCThree:rgb(236, 54, 141);
+    --colorWhite:rgb(248, 248, 248);
+    --colorDark:rgb(49, 57, 60);
+    --colorDarkComplement:rgb(147, 130, 127);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+
+}
+body{
+    background: var(--mainColor);
+}
+header{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+header>h1{
+    text-align: center;
+    font-size: 42px;
+    color: var(--colorDark);
+    
+}
+.menu{
+    height: 70px;
+    background: var(--colorWhite);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    pad: 20px;
+    
+    
+}
+.menu > a{
+    height: 100%;
+    width: 25%;
+    text-decoration: none;
+    line-height: 70px;
+    color: var(--colorDark);
+    
+}
+.menu > a:hover{
+   background: linear-gradient(46deg, var(--mainColorCOne),var(--mainColorCTwo));
+    
+}
+
+footer{
+    height: 150px;
+    text-align: center;
+    background: var(--colorDark);
+    color: var(--colorWhite);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    pad: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
