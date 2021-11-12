@@ -1,0 +1,271 @@
+
+.cont{
+    width: 80%;
+    background: var(--colorWhite);
+    margin: 10px auto;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.contForm{
+    width: 70%;
+    
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 1px 1px 3px 1px rgb(233, 233, 233);
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+.contForm>p{
+    font-size: 15.5px;
+    text-align: justify;
+}
+form{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background: var(--colorWhite);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    
+}
+
+input{
+    height: 40px;
+    width: 50%;
+    margin: auto;
+    outline: none;
+    border: none;
+    background: var(--colorWhite);
+    border-bottom: 3px solid var(--colorDark);
+    text-align: center;
+}
+form>button{
+    height: 40px;
+    width: 100px;
+    background: var(--mainColorCOne);
+    border-radius: 10px;
+    margin: auto;
+    border: none;
+    box-shadow: 1px 1px 5px 1px rgba(190, 190, 190, 0.623);
+   
+}
+form>button:hover{
+   cursor: pointer;
+   background: var(--mainColor);
+   
+}
+/* ------------estilos seccion recomendaciones ---------------------- */
+.recomedated{
+    width: 70%;
+    box-shadow: 1px 1px 3px 1px rgb(233, 233, 233);
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 15px;
+    border-radius: 10px;
+    display: none;
+}
+.levelTension{
+    display: block;
+}
+.recomedated>h1{
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0 10px 10px 0;
+    background: var(--mainColor);
+    width: 50%;
+    padding: auto 10px;
+    text-align: center;
+}
+.recomedated>p{
+    height: 20px;
+    line-height: 20px;
+    background: rgb(152, 152, 243);
+    width: 30%;
+    text-align: center;
+    border-radius: 0 0 10px 0;
+}
+
+.card{
+    width: 60%;
+    background: var(--mainColorCOne);
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+
+.cardRight{
+    margin: auto;
+    margin-right: 10px;
+    background:var(--mainColorCTwo);
+    
+}
+.cardRight>h3{
+    text-align: right;
+}
+.card>h3{
+    margin: 10px auto;
+}
+.card>button{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.card>button:hover{
+   cursor: pointer;
+   transform: translate(2px);
+   background: rgb(201, 216, 214);
+}
+/*------------------------- estilos hipertension--------------------- */
+
+.hypeT>h1{
+    
+    background: var(--secondColorCThree);
+    
+}
+.hypeT>p{
+    
+    background: rgb(243, 152, 164);
+
+}
+
+.hypeT_card{
+    
+    background: var(--secondColorCOne);  
+}
+
+.hypeT_cardRight{
+    
+    background:var(--secondColorCThree);
+    
+}
+
+/*------------------------- estilos hipotension--------------------- */
+
+.hipoT>h1{
+    
+    background: rgb(255, 242, 126);
+    
+}
+.hipoT>p{
+    
+    background: rgb(250, 255, 185);
+
+}
+
+.hipoT_card{
+    
+    background: rgb(255, 231, 126);  
+}
+
+.hipoT_cardRight{
+    
+    background:rgb(241, 236, 183);
+    
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+.square{
+    width: 200px;
+    height: 400px;
+    background: red;
+    margin: auto;
+}
+.registerSection{
+    width: 70%;
+    box-sizing: border-box;
+    margin: auto;
+    box-shadow: 1px 1px 3px 1px rgb(233, 233, 233);
+    border-radius: 10px;
+}
+.registerSection>h1{
+    text-align: center;
+}
+.registers{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    
+    margin: auto;
+    justify-content: space-around;
+}
+
+.tableResgister{
+    width: 50%; 
+    margin: 5px;
+    
+}
+table{
+    
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(233, 233, 233);
+}
+
+.graphicsRegisters{
+    width: 50%;
+    margin: 5px;
+    
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(233, 233, 233);
+
+}
+.header_table{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid black;
+    background: var(--mainColor);
+    border-radius: 10px 10px 0 0 ;
+   
+}
+th,td{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.col_No{
+    width: 20px;
+    border-right: 1px solid black;
+    border-radius: 10px 0 0 0;
+}
+.col_actions{
+    border-radius: 0 10px 0 0;
+    
+}
+.col_actions>button{
+    margin: 2px;
+    cursor: pointer;
+}
+.editBtn{
+    background: var(--mainColorCOne);
+    border: 0.5px solid rgba(46, 46, 46, 0.459);
+}
+.deleteBtn{
+    background: linear-gradient(46deg,var(--secondColorCTwo),var(--secondColorCThree)) ;
+    border: 0.5px solid rgba(46, 46, 46, 0.459);
+    
+}
+.editBtn:hover{
+    background: var(--mainColor);
+    
+}
+.deleteBtn:hover{
+    background: linear-gradient(46deg,var(--secondColorCOne),var(--secondColorCTwo)) ;  
+}

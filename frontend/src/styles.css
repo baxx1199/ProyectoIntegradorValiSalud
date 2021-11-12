@@ -10,6 +10,7 @@
     --colorWhite:rgb(248, 248, 248);
     --colorDark:rgb(49, 57, 60);
     --colorDarkComplement:rgb(147, 130, 127);
+    --form:rgba(44, 62, 165, 0.788);
 }
 *{
     margin: 0;
@@ -21,7 +22,7 @@ body{
     background: var(--mainColor);
 }
 header{
-    min-height: 200px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -30,6 +31,8 @@ header>h1{
     text-align: center;
     font-size: 42px;
     color: var(--colorDark);
+    height: 80px;
+    line-height: 80px;
     
 }
 .menu{
@@ -49,12 +52,12 @@ header>h1{
     width: 25%;
     text-decoration: none;
     line-height: 70px;
-    color: var(--colorDark);
-    
+    color: var(--colorDark);   
 }
 .menu > a:hover{
-   background: linear-gradient(46deg, var(--mainColorCOne),var(--mainColorCTwo));
     
+   background: linear-gradient(46deg, var(--mainColorCOne),var(--mainColorCTwo));
+    border-bottom: 3px solid var(--colorDark);
 }
 
 footer{

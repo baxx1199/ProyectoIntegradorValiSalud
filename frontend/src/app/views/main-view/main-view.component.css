@@ -1,0 +1,194 @@
+.mainViewCont{
+
+    width: 80%;
+    margin: 10px auto;
+    background: var(--colorWhite);
+}
+li{
+    list-style: none;
+}
+.containerSelection{
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  
+}
+
+ .h2Selection {
+    text-align: center;
+    font-size: 30px;
+    background: #dbf4f5;
+    padding: 10px;
+  }
+  
+
+  .selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+
+  .selection .divSel {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  
+
+  .selection .divSel h4 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+  }
+  
+
+  .selection a {
+    width: 20%;
+    margin: 2% 5%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 22px;
+    text-decoration: none;
+    color: #353536;
+  }
+  
+
+  .selection a .hoverEfect {
+    width: 100px;
+    height: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 195, 255, 0.76)), to(rgba(14, 214, 241, 0.76)));
+    background: linear-gradient(to bottom, rgba(0, 195, 255, 0.76), rgba(14, 214, 241, 0.76));
+    position: absolute;
+    top: 150px;
+    left: -150px;
+    border-radius: 100%;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  
+
+  .selection a .hoverEfect2 {
+    width: 100px;
+    height: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 73, 73, 0.76)), to(rgba(149, 31, 247, 0.76)));
+    background: linear-gradient(to bottom, rgba(243, 73, 73, 0.76), rgba(149, 31, 247, 0.76));
+    position: absolute;
+    top: 150px;
+    right: -150px;
+    border-radius: 100%;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  
+
+  .selection .selectionDiabetes {
+    background-color: #c6f4ff;
+  }
+  
+
+  .selection .selectionDiabetes:hover {
+    -webkit-box-shadow: 1px 1px 5px #7a7d7e;
+            box-shadow: 1px 1px 5px #7a7d7e;
+  }
+  
+
+  .selection .selectionDiabetes:hover .hoverEfect {
+    width: 400px;
+    height: 400px;
+    top: -70px;
+    left: -70px;
+  }
+
+  .selection .selectionTension {
+    background-color: #ffc3c3;
+  }
+  
+
+  .selection .selectionTension:hover {
+    -webkit-box-shadow: 1px 1px 5px #7a7d7e;
+            box-shadow: 1px 1px 5px #7a7d7e;
+  }
+  
+
+  .selection .selectionTension:hover .hoverEfect2 {
+    width: 400px;
+    height: 400px;
+    top: -70px;
+    right: -70px;
+  }
+
+  .containerAboutUs h1 {
+    text-align: center;
+  }
+  
+  .containerAboutUs .containerAboutInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 3%;
+  }
+  
+  .containerAboutUs .containerAboutInfo .divInfo {
+    text-align: center;
+    width: 60%;
+    background-color: #f8f7e6;
+    border-radius: 10px;
+  }
+  
+  .containerAboutUs .containerAboutInfo .divInfo h2 {
+    text-align: center;
+  }
+  
+  .containerAboutUs .containerAboutInfo .origin {
+    margin: auto;
+    margin-top: 1%;
+    margin-right: 0%;
+  }
+  
+  .containerAboutUs .containerMembers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  
+  .containerAboutUs .containerMembers h3 {
+    text-align: center;
+  }
+  
+  .containerAboutUs .containerMembers ul {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  
+  .containerAboutUs .containerMembers .member {
+    width: 25%;
+  }
+  
+  .containerAboutUs .containerMembers .member img {
+    display: block;
+    margin: auto;
+  }

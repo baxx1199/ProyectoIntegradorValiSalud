@@ -1,0 +1,129 @@
+<div class="cont">
+    <div class="contForm">
+        <p>Ingrese los valores de Presion sistolica y presion Diastolica para crear un registro</p>
+        <form action="" #formTension = "ngForm" (ngSubmit)="addRegisterTension(formTension)">
+            <input type="hidden" name="_id" [(ngModel)]="tensionService.newRegister._id">
+            <!-- <label for="pS">Presion Sistolica</label> -->
+            <input type="number" name="systolic" id="pS" placeholder="Presion Sistolica" [(ngModel)]= "tensionService.newRegister.systolic">
+            <!-- <label for="pD">Presion Diastolica</label> -->
+            <input type="number" name="diastolic" id="pD" placeholder="Presion Diastolica" [(ngModel)]= "tensionService.newRegister.diastolic">
+            <!-- <label for="pulse">Pulso</label> -->
+            <input type="number" name="pulse" id="pulse" placeholder="Pulso" [(ngModel)]= "tensionService.newRegister.pulse">
+    
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <div class="recomedated" [ngClass]='{levelTension:lvlTensionClass==="normal"}'>
+        <h1> Tension normal </h1>
+        <p>129/80</p>
+    
+        <div class="card">
+            <h3>Alimentacion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas</button>
+        </div>
+        <div class="card cardRight">
+            <h3>Actividad fisica</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas </button>
+        </div>
+        <div class="card">
+            <h3>Habitos Saludables</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas</button>
+        </div>
+    </div>
+    <div class="recomedated hipoT" [ngClass]='{levelTension:lvlTensionClass==="low"}' >
+        <h1> HipoTension </h1>
+        <p>129/80</p>
+    
+        <div class="card hipoT_card">
+            <h3>Alimentacion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas</button>
+        </div>
+        <div class="card cardRight hipoT_cardRight">
+            <h3>Actividad fisica</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas </button>
+        </div>
+        <div class="card hipoT_card">
+            <h3>Habitos Saludables</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas</button>
+        </div>
+    </div>
+    <div class="recomedated hypeT" [ngClass]='{levelTension:lvlTensionClass==="high"}'>
+        <h1> HiperTension </h1>
+        <p>129/80</p>
+    
+        <div class="card hypeT_card">
+            <h3>Alimentacion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas</button>
+        </div>
+        <div class="card cardRight hypeT_cardRight">
+            <h3>Actividad fisica</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas </button>
+        </div>
+        <div class="card hypeT_card">
+            <h3>Habitos Saludables</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
+            <button > ver mas</button>
+        </div>
+    </div>
+    <div class="registerSection">
+        <h1>Signos registrados</h1>
+        <div class="registers">
+
+        
+            <div class="tableResgister">
+                
+                <table>
+                        
+                        <thead class="header_table">
+                            <th class="col_No">#</th>
+                            <th class="col">Signos</th>
+                            <th class="col">Pulso</th>
+                            <th class="col_date">Fecha</th> 
+                            <th class="col_actions"> </th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let register of registersTension; let i = index">
+                                <td class="col_No">{{i+1}}</td>
+                                <td class="col">{{register.systolic}}/{{register.diastolic}}</td>
+                                <td class="col">{{register.pulse ? register.pulse : '-'}}</td>
+                                <td class="col_date">{{register.createdAt | date: 'short'}}</td>
+                                <td class="col_actions">
+                                    <button class="editBtn">
+                                        <i class="material-icons" (click)="editRegister(register)">edit</i>
+                                    </button>
+                                    <button class="deleteBtn" (click)="deleteRegister(register._id)">
+                                        <i class="material-icons">delete</i>
+                                    </button>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+            <div class="graphicsRegisters">
+                <canvas baseChart 
+                    [datasets]="registersForChart" 
+                    [labels]="labelsCharts" 
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors" 
+                    [legend]="lineChartLegend" 
+                    [chartType]="lineChartType" 
+                    [plugins]="lineChartPlugins"
+                    (chartHover)="chartHovered($event)" 
+                    (chartClick)="chartClicked($event)">
+            </canvas> 
+            </div>
+        </div>
+    </div>
+        
+</div>
+
+
