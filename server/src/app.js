@@ -12,5 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended:false}));
 
 app.use("/api/tension",require('./routes/tension.routes'))
+/* app.use("/api/diabetes",require('./routes/diabetes.routes')) */
 
 module.exports = app;

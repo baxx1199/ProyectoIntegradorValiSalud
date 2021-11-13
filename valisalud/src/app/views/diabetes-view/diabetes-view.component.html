@@ -1,19 +1,21 @@
 <div class="cont">
     <div class="contForm">
-        <p>Ingrese los valores de Presion sistolica y presion Diastolica para crear un registro</p>
-        <form action="" #formTension = "ngForm" (ngSubmit)="addRegisterTension(formTension)">
-            <input type="hidden" name="_id" [(ngModel)]="tensionService.newRegister._id">
+        <p>Ingrese los valores de glucosa sanguinea</p>
+        <form action="" #formTension = "ngForm" >
+            <select name="typeExam" id="typeEx">
+                <option value="AC1">AC1</option>
+                <option value="aleatorio">aleatorio de glucosa sanguínea</option>
+                <option value="glucemiaAyunas">glucemia en ayunas</option>
+                <option value="tolerancia">tolerancia oral a la glucosa</option>
+            </select>
+            <input type="hidden" name="_id" >
             <!-- <label for="pS">Presion Sistolica</label> -->
-            <input type="number" name="systolic" id="pS" placeholder="Presion Sistolica" [(ngModel)]= "tensionService.newRegister.systolic">
-            <!-- <label for="pD">Presion Diastolica</label> -->
-            <input type="number" name="diastolic" id="pD" placeholder="Presion Diastolica" [(ngModel)]= "tensionService.newRegister.diastolic">
-            <!-- <label for="pulse">Pulso</label> -->
-            <input type="number" name="pulse" id="pulse" placeholder="Pulso" [(ngModel)]= "tensionService.newRegister.pulse">
-    
+            <input type="number" name="lvlGlucose" id="lG" placeholder="glucosa sanguinea" >
+            
             <button type="submit">Registrar</button>
         </form>
     </div>
-    <div class="recomedated" [ngClass]='{levelTension:lvlTensionClass==="normal"}'>
+    <div class="recomedated levelTension" >
         <h1> Tension normal </h1>
         <p>129/80</p>
     
@@ -33,7 +35,7 @@
             <button > ver mas</button>
         </div>
     </div>
-    <div class="recomedated hipoT" [ngClass]='{levelTension:lvlTensionClass==="low"}' >
+    <div class="recomedated hipoT" >
         <h1> HipoTension </h1>
         <p>129/80</p>
     
@@ -53,7 +55,7 @@
             <button > ver mas</button>
         </div>
     </div>
-    <div class="recomedated hypeT" [ngClass]='{levelTension:lvlTensionClass==="high"}'>
+    <div class="recomedated hypeT" >
         <h1> HiperTension </h1>
         <p>129/80</p>
     
@@ -90,7 +92,7 @@
                             <th class="col_actions"> </th>
                         </thead>
                         <tbody>
-                            <tr *ngFor = "let register of registersTension; let i = index">
+                            <!-- <tr *ngFor = "let register of registersTension; let i = index">
                                 <td class="col_No">{{i+1}}</td>
                                 <td class="col">{{register.systolic}}/{{register.diastolic}}</td>
                                 <td class="col">{{register.pulse ? register.pulse : '-'}}</td>
@@ -104,12 +106,12 @@
                                     </button>
                                     
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                 </table>
             </div>
             <div class="graphicsRegisters">
-                <canvas baseChart 
+                <!-- <canvas baseChart 
                     [datasets]="registersForChart" 
                     [labels]="labelsCharts" 
                     [options]="lineChartOptions"
@@ -119,7 +121,7 @@
                     [plugins]="lineChartPlugins"
                     (chartHover)="chartHovered($event)" 
                     (chartClick)="chartClicked($event)">
-            </canvas> 
+            </canvas>  -->
             </div>
         </div>
     </div>

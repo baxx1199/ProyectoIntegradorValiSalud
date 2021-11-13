@@ -12,7 +12,8 @@ import { TensionViewComponent } from './views/tension-view/tension-view.componen
 import { DiabetesViewComponent } from './views/diabetes-view/diabetes-view.component';
 import { UserViewComponent } from './views/user-view/user-view.component';
 import { FormsModule } from '@angular/forms';
-import { ChartsModule } from 'ng2-charts';
+
+
 
 
 @NgModule({
@@ -29,9 +30,10 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

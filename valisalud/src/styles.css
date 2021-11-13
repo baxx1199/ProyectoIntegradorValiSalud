@@ -73,3 +73,22 @@ footer{
     padding: 10px;
     box-sizing: border-box;
 }
+ .imageLogo{
+     width: 40%;
+     
+     margin: auto;
+     vertical-align: auto;
+     background: red;
+ }
+ .right{
+     width: 50%;
+     margin: auto;
+     vertical-align: auto;
+     background: green;
+ }
+ .bot{
+     width: 80%;
+     background: purple;
+     margin: auto;
+     vertical-align: auto;
+ }
