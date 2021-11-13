@@ -1,8 +1,8 @@
 <div class="cont">
     <div class="contForm">
         <p>Ingrese los valores de glucosa sanguinea</p>
-        <form action="" #formTension = "ngForm" >
-            <select name="typeExam" id="typeEx">
+        <form action="" #formDiabetes = "ngForm" (ngSubmit)='addRegisterDiabetes(formDiabetes)'>
+            <select name="typeExam" id="typeEx" (change)='seeComp($event)'>
                 <option value="AC1">AC1</option>
                 <option value="aleatorio">aleatorio de glucosa sanguínea</option>
                 <option value="glucemiaAyunas">glucemia en ayunas</option>
@@ -11,6 +11,12 @@
             <input type="hidden" name="_id" >
             <!-- <label for="pS">Presion Sistolica</label> -->
             <input type="number" name="lvlGlucose" id="lG" placeholder="glucosa sanguinea" >
+
+            <div class="toleranciaForm" [ngClass]='{visibilityRec:tVisisbility==="tolerancia"}'>
+                <p>Ingrese el tiempo transcurrido desde la ultima comida en minutos ej: para una hora seria 60</p>
+                <input type="number" name="last_time_eat" id="lte" placeholder="Tiempo transcurrido desde la ultima comida">
+            </div>
+            
             
             <button type="submit">Registrar</button>
         </form>

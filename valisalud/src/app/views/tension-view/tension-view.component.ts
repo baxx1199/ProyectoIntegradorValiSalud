@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-/* import { ChartDataset, ChartOptions } from 'chart.js';
-import { Color, Label } from 'ng2-charts'; */
+
 import { ITension } from 'src/app/models/ITension.model';
 import { TensionServiceService } from '../../services/tension-service.service';
 import { Observable } from 'rxjs';
@@ -46,7 +45,6 @@ export class TensionViewComponent implements OnInit {
     if (form.value._id) {
       this.tensionService.updateRegister(form.value).subscribe(
         res=>{
-          console.log(res)
           this.getTensionsRegisters();
           form.reset()
         },
@@ -54,20 +52,15 @@ export class TensionViewComponent implements OnInit {
       )
     }else{
       this.tensionService.saveRegsiterTension(form.value).subscribe(
-        res => {
-          console.log(res)
-          
-          
-        },
-        err =>console.log(err)
+        
       )
       this.levelTension = true;
-          this.lvlTensionClass = this.tensionService.diagnostic();
-          this.getTensionsRegisters()
-          form.reset()
-      
+      this.lvlTensionClass = this.tensionService.diagnostic();
+      this.getTensionsRegisters()
     }
   }
+
+  
 
   deleteRegister(_id:any){
     

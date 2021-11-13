@@ -74,7 +74,10 @@ select> option{
     border-radius: 10px;
     display: none;
 }
-.levelTension{
+.toleranciaForm{
+    display: none;
+}
+.visibilityRec{
     display: block;
 }
 .recomedated>h1{
@@ -131,6 +134,56 @@ select> option{
    background: rgb(201, 216, 214);
 }
 
+/*------------------------- estilos diabetes--------------------- */
+
+.diab>h1{
+    
+    background: var(--secondColorCThree);
+    
+}
+.diab>p{
+    
+    background: rgb(243, 152, 164);
+
+}
+
+.diab_card{
+    
+    background: var(--secondColorCOne);  
+}
+
+.diab_cardRight{
+    
+    background:var(--secondColorCThree);
+    
+}
+
+/*------------------------- estilos prediabetes--------------------- */
+
+.preD>h1{
+    
+    background: rgb(255, 242, 126);
+    
+}
+.preD>p{
+    
+    background: rgb(250, 255, 185);
+
+}
+
+.preD_card{
+    
+    background: rgb(255, 231, 126);  
+}
+
+.preD_cardRight{
+    
+    background:rgb(241, 236, 183);
+    
+}
+
+
+/* --------------------------------------------------------------------------- */
 
 
 /* tabla y grafica */
