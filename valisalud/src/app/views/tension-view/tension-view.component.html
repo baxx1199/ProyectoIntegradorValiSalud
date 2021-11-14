@@ -7,7 +7,7 @@
             <input type="number" name="systolic" id="pS" placeholder="Presion Sistolica" [(ngModel)]= "tensionService.newRegister.systolic">
             <!-- <label for="pD">Presion Diastolica</label> -->
             <input type="number" name="diastolic" id="pD" placeholder="Presion Diastolica" [(ngModel)]= "tensionService.newRegister.diastolic">
-            <!-- <label for="pulse">Pulso</label> -->
+            <!-- <label for="pulse">Pulso</label> --> 
             <input type="number" name="pulse" id="pulse" placeholder="Pulso" [(ngModel)]= "tensionService.newRegister.pulse">
     
             <button type="submit">Registrar</button>
@@ -15,62 +15,90 @@
     </div>
     <div class="recomedated" [ngClass]='{levelTension:lvlTensionClass==="normal"}'>
         <h1> Tension normal </h1>
-        <p>129/80</p>
+        
     
         <div class="card">
             <h3>Alimentacion</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas</button>
+<p><br>	Salmón.
+    <br>	Jitomate. 
+    <br>	Huevo.
+    <br>	Leche.
+    <br>	Espárragos.
+    <br>	Manzana.
+    <br>	Avena.
+    <br>	Aguacate
+    </p>            
         </div>
         <div class="card cardRight">
             <h3>Actividad fisica</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas </button>
+<p><br>	Trotar o corres 
+    <br>	 Nadar 
+    <br>	Patinar 
+    <br>	Jugar futbol
+    <br>	Saltar la cuerda
+    </p>           
         </div>
         <div class="card">
             <h3>Habitos Saludables</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas</button>
+<p><br>	Mantén una alimentación equilibrada para tener un mejor estilo de vida
+    <br>	Consume leche como parte de tus hábitos saludables
+    <br>	Realiza actividad física regular para tener hábitos saludables
+    <br>	Mantén un peso corporal saludable
+    <br>	Controla las situaciones de estrés como parte de tus hábitos saludables
+    <br>	Dormir de forma adecuada ayuda a mantener un buen estilo de vida
+    <br>	Deja de fumar y consume menos alcohol
+    </p>            
         </div>
     </div>
     <div class="recomedated hipoT" [ngClass]='{levelTension:lvlTensionClass==="low"}' >
         <h1> HipoTension </h1>
-        <p>129/80</p>
+        
     
         <div class="card hipoT_card">
             <h3>Alimentacion</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas</button>
+            <p><br>	1 / 8 Hidratarse con agua.
+                <br>	2 / 8 Una taza de té o café
+                <br>	3 / 8 Regaliz.
+                <br>	4 / 8 Chocolate negro.
+                <br>	5 / 8 Queso. 
+                <br>	6 / 8 Bacalao. 
+                <br>	7 / 8 Jamón. 
+                <br>	8 / 8 Anchoas.
+                </p>
+            
         </div>
         <div class="card cardRight hipoT_cardRight">
             <h3>Actividad fisica</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas </button>
+<p>Entre los ejercicios de resistencia que permiten reducir los episodios de hipotensión se encuentran la carrera, la natación o el ciclismo. Caminar, trotar o correr, según lo permitan la resistencia y la forma física de cada persona, estabiliza la presión arterial al aumentar el rendimiento cardiaco</p>           
         </div>
         <div class="card hipoT_card">
             <h3>Habitos Saludables</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas</button>
+<p><br>	Cuidado con el sobrepeso. ...
+    <br>	No fumar. ...
+    <br>	Consumo moderado de bebidas alcohólicas. ...
+    <br>	Solo dos o tres cafés. ...
+    <br>	Disminuir la ingesta de sodio. ...
+    <br>	Incluir más frutas, verduras y productos lácteos desgrasados que tienen un contenido reducido de grasas saturadas y colesterol.
+    </p>            
         </div>
     </div>
     <div class="recomedated hypeT" [ngClass]='{levelTension:lvlTensionClass==="high"}'>
         <h1> HiperTension </h1>
-        <p>129/80</p>
+        
     
         <div class="card hypeT_card">
             <h3>Alimentacion</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas</button>
+<p>Dieta baja en sal
+    Junto con la reducción en el consumo de sal, el tratamiento dietético de la HTA consiste en una dieta rica en verduras, frutas, legumbres, pescado, aceite de oliva y alimentos que contengan poca grasa. El alcohol y sustancias excitantes como la cafeína producen un aumento de la presión arterial.
+    </p>            
         </div>
         <div class="card cardRight hypeT_cardRight">
             <h3>Actividad fisica</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas </button>
+<p>Para aquellas personas que padezcan hipertensión son efectivos aquellos ejercicios donde participen grandes grupos musculares, de carácter rítmico y aeróbico, como caminar, bailar, correr, nadar y andar en bicicleta. Caminar, mejora la función cardiovascular y la capacidad pulmonar.</p>           
         </div>
         <div class="card hypeT_card">
             <h3>Habitos Saludables</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint placeat ullam! Autem unde quis quisquam suscipit architecto. Accusantium incidunt dolorum recusandae maxime doloribus tenetur veritatis deleniti facere consequatur officia.</p>
-            <button > ver mas</button>
+<p>Mantenerse o alcanzar un peso adecuado mediante el consumo de una dieta variada. Minimizar la ingesta de grasas saturadas y colesterol para prevenir riesgos cardiovasculares. Moderar el consumo de café. Tomar cantidades diarias suficientes de calcio.</p>            
         </div>
     </div>
     <div class="registerSection">

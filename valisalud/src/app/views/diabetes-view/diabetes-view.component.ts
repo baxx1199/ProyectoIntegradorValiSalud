@@ -20,7 +20,9 @@ export class DiabetesViewComponent implements OnInit {
   visibilityRec:boolean = false;
   lvlDiabetesClass:string = '';
   tVisisbility:string ='';
+  bloodGlucoseCurrently:number = 0;
 
+ 
   constructor(public diabetesService:DiabetesServiceService) { }
 
   ngOnInit(): void {
@@ -46,7 +48,7 @@ export class DiabetesViewComponent implements OnInit {
 }
 
   addRegisterDiabetes(form:NgForm){
-
+    this.bloodGlucoseCurrently= form.value.lvlGlucose;
     if (form.value._id) {
       this.diabetesService.updateRegister(form.value).subscribe(
         res=>{
@@ -60,7 +62,15 @@ export class DiabetesViewComponent implements OnInit {
         
       )
       this.visibilityRec = true;
-      /* this.lvlDiabetesClass = this.diabetesService.diagnostic(); */
+      if(this.tVisisbility ==='AC1'){
+        this.lvlDiabetesClass=this.diabetesService.diagnosticAC1(form.value.lvlGlucose,form.value.lvlGlucoseSecond);
+      }else if(this.tVisisbility ==='aleatorio'){
+        this.lvlDiabetesClass=this.diabetesService.diagnosticAlt(form.value.lvlGlucose)
+      }else if(this.tVisisbility ==='glucemiaAyunas'){
+        this.lvlDiabetesClass=this.diabetesService.diagnosticAyu(form.value.lvlGlucose)
+      }else if(this.tVisisbility ==='tolerancia'){
+        this.lvlDiabetesClass=this.diabetesService.diagnosticTol(form.value.lvlGlucose,form.value.last_time_eat)
+      }
       this.getDiabetesRegisters()
     }
   }
@@ -87,6 +97,7 @@ export class DiabetesViewComponent implements OnInit {
     this.diabetesService.newRegister = currencyRegister;
   }
 
+ 
 
 }
 

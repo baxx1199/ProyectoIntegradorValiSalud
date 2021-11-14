@@ -9,9 +9,14 @@
                 <option value="tolerancia">tolerancia oral a la glucosa</option>
             </select>
             <input type="hidden" name="_id" >
-            <!-- <label for="pS">Presion Sistolica</label> -->
+            <p [ngClass]='{visibilityRec:tVisisbility==="AC1"}'> Escriba solo el valor en decimal del porcentaje Ej: 5.7% == 5.7</p>
+            
             <input type="number" name="lvlGlucose" id="lG" placeholder="glucosa sanguinea" >
 
+            <div class="ac1Form" [ngClass]='{visibilityRec:tVisisbility==="AC1"}'>
+                
+                <input type="number" name="lvlGlucoseSecond" id="lteS" placeholder="glucosa sanguinea segunda prueba">
+            </div>
             <div class="toleranciaForm" [ngClass]='{visibilityRec:tVisisbility==="tolerancia"}'>
                 <p>Ingrese el tiempo transcurrido desde la ultima comida en minutos ej: para una hora seria 60</p>
                 <input type="number" name="last_time_eat" id="lte" placeholder="Tiempo transcurrido desde la ultima comida">
@@ -23,7 +28,7 @@
     </div>
     <div class="recomedated levelTension" >
         <h1> Tension normal </h1>
-        <p>129/80</p>
+        <p>{{bloodGlucoseCurrently}}</p>
     
         <div class="card">
             <h3>Alimentacion</h3>
@@ -43,7 +48,7 @@
     </div>
     <div class="recomedated hipoT" >
         <h1> HipoTension </h1>
-        <p>129/80</p>
+        <p>{{bloodGlucoseCurrently}}</p>
     
         <div class="card hipoT_card">
             <h3>Alimentacion</h3>
@@ -63,7 +68,7 @@
     </div>
     <div class="recomedated hypeT" >
         <h1> HiperTension </h1>
-        <p>129/80</p>
+        <p>{{bloodGlucoseCurrently}}</p>
     
         <div class="card hypeT_card">
             <h3>Alimentacion</h3>
@@ -92,16 +97,16 @@
                         
                         <thead class="header_table">
                             <th class="col_No">#</th>
-                            <th class="col">Signos</th>
-                            <th class="col">Pulso</th>
+                            <th class="col">Nivel de glucosa</th>
+                            <th class="col">Nivel de glucosa 2</th>
                             <th class="col_date">Fecha</th> 
                             <th class="col_actions"> </th>
                         </thead>
                         <tbody>
-                            <!-- <tr *ngFor = "let register of registersTension; let i = index">
+                            <tr *ngFor = "let register of registersDiabetes; let i = index">
                                 <td class="col_No">{{i+1}}</td>
-                                <td class="col">{{register.systolic}}/{{register.diastolic}}</td>
-                                <td class="col">{{register.pulse ? register.pulse : '-'}}</td>
+                                <td class="col">{{register.blood_glucose}}mg/dl</td>
+                                <td class="col">{{register.blood_glucoseSecond ? register.blood_glucoseSecond : '-'}}</td>
                                 <td class="col_date">{{register.createdAt | date: 'short'}}</td>
                                 <td class="col_actions">
                                     <button class="editBtn">
@@ -110,9 +115,9 @@
                                     <button class="deleteBtn" (click)="deleteRegister(register._id)">
                                         <i class="material-icons">delete</i>
                                     </button>
-                                    
+                                     
                                 </td>
-                            </tr> -->
+                            </tr>
                         </tbody>
                 </table>
             </div>

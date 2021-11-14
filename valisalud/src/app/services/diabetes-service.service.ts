@@ -13,6 +13,7 @@ export class DiabetesServiceService {
 
 newRegister:IDiabetes = {
   blood_glucose:0,
+  blood_glucoseSecond:0,
   last_time_eat:0
 }
 
@@ -36,13 +37,13 @@ newRegister:IDiabetes = {
     return throwError(error.message);
   }
   /* diagnostico ac1 */
-  diagnosticAC1(a:number = this.newRegister.blood_glucose){
+  diagnosticAC1(a:number = this.newRegister.blood_glucose , b:number = this.newRegister.blood_glucoseSecond ? this.newRegister.blood_glucoseSecond : 0){
     let lvlDiabetesClass = 'normal'
-    if(a >= 6.5 ){
+    if(a >= 6.5 && b >= 6.5){
       lvlDiabetesClass= 'diad'
-    }else if(a >= 5.7 && a<= 6.4 ){
+    }else if(a >= 5.7 && a<= 6.4&& b >= 5.7 && b<= 6.4){
       lvlDiabetesClass = 'preD'
-    }else if(a > 5.7){
+    }else if(a > 5.7 && b > 5.7){
       lvlDiabetesClass = 'normal'
     }
     return lvlDiabetesClass;
@@ -76,11 +77,11 @@ newRegister:IDiabetes = {
 
 diagnosticTol(a:number = this.newRegister.blood_glucose, b:number =this.newRegister.last_time_eat){
   let lvlDiabetesClass = 'normal'
-  if(a >= 6.5 ){
+  if(a >= 200 && b >= 120 ){
     lvlDiabetesClass= 'diad'
-  }else if(a >= 5.7 && a<= 6.4 ){
+  }else if(a >= 140 && a <= 199 && b >= 120 ){
     lvlDiabetesClass = 'preD'
-  }else if(a > 5.7){
+  }else if(a < 140 && b>= 120){
     lvlDiabetesClass = 'normal'
   }
   return lvlDiabetesClass;
